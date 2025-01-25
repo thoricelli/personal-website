@@ -13,8 +13,12 @@ function App() {
         </h1>
         <h1 className="dark:text-white">This website is a work in progress.</h1>
         <div className="flex">
-          <Github size={48} color="white"></Github>
-          <Youtube size={48} color="white"></Youtube>
+          <a href="https://github.com/thoricelli">
+            <Github size={48} color="white"></Github>
+          </a>
+          <a href="https://www.youtube.com/thoricelli">
+            <Youtube href="" size={48} color="white"></Youtube>
+          </a>
         </div>
       </div>
     </>
