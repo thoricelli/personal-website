@@ -13,6 +13,9 @@ jobs:
     concurrency:
       group: "pages"
       cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: https://thoricelli.github.io/personal-website/
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
