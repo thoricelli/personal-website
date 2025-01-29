@@ -15,7 +15,7 @@ jobs:
       cancel-in-progress: false
     environment:
       name: github-pages
-      url: https://thoricelli.github.io/personal-website/
+      url: https://www.thorgoesdevving.com/
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository

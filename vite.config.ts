@@ -6,5 +6,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [deno(), react(), tailwindcss()],
-  base: "https://thoricelli.github.io/personal-website/",
+  assetsInclude: ["**/*.md", "**/*.MD"],
 });
