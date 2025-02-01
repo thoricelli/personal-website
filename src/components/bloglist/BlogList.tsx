@@ -9,6 +9,7 @@ function BlogList() {
           <BlogItem
             title={item.Name}
             preview={item.Preview}
+            description={item.Description}
           ></BlogItem>
         );
       })}
