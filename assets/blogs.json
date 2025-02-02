@@ -1,0 +1,8 @@
+{
+  "hello-world": {
+    "Name": "Hello World!",
+    "Description": "Hi, this is my personal website.\nI'll be posting mostly tech related stuff that I want to share info about!",
+    "Blog": "Hello_World.MD",
+    "Preview": "hello_world.png"
+  }
+}
