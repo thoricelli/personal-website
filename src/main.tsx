@@ -1,9 +1,9 @@
-import './index.css'
+import "./index.css";
 // @deno-types="@types/react"
-import { StrictMode } from 'react'
+import { StrictMode } from "react";
 // @deno-types="@types/react-dom/client"
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.tsx";
 import BlogPost from "./components/blogpost/BlogPost.tsx";
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "*",
-        element: <FourOFour/>
+        element: <FourOFour />,
       },
       {
         path: "/",
@@ -24,14 +24,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog/:id",
-        element: <BlogPost title="Hello World!" intro="Hi, this is my personal website. \n I'll be posting mostly tech related stuff that I want to share info about!"/>
-      }
+        element: <BlogPost />,
+      },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
