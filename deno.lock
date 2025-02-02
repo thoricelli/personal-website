@@ -4376,6 +4376,20 @@
       "npm:react@^18.3.1",
       "npm:tailwindcss@4",
       "npm:vite@^6.0.11"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:autoprefixer@^10.4.20",
+        "npm:flowbite-react-icons@^1.2.0",
+        "npm:flowbite-react@~0.10.2",
+        "npm:postcss@^8.5.1",
+        "npm:react-dom@^18.3.1",
+        "npm:react-markdown@^9.0.3",
+        "npm:react-router-dom@^7.1.5",
+        "npm:react@^18.3.1",
+        "npm:tailwindcss@4",
+        "npm:vite@^6.0.11"
+      ]
+    }
   }
 }

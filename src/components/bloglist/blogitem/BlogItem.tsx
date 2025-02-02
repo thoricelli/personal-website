@@ -9,7 +9,7 @@ function BlogItem({ id, blog }: BlogItemProps) {
   return (
     <>
       <hr className="w-100 h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <a href={`/blog/${id}`}>
+      <a href={`#/blog/${id}`}>
         <article className="w-100 text-center p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           {blog.Preview != null && (
             <img
