@@ -7,13 +7,13 @@ interface BlogItemProps {
 
 function BlogItem({ id, blog }: BlogItemProps) {
   return (
-    <>
-      <hr className="w-100 h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+    <div className="max-w-100 p-5">
+      <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <a href={`#/blog/${id}`}>
-        <article className="w-100 text-center p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <article className="grid justify-items-center my-5 text-center p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           {blog.Preview != null && (
             <img
-              className="h-60 mb-2 w-100 rounded-lg object-cover"
+              className="h-60 mb-2 rounded-lg object-cover"
               src={import.meta.env.BASE_URL + "assets/previews/" + blog.Preview}
               alt="blog image"
             />
@@ -33,7 +33,7 @@ function BlogItem({ id, blog }: BlogItemProps) {
           })}
         </article>
       </a>
-    </>
+    </div>
   );
 }
 
