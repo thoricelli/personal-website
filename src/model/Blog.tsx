@@ -3,6 +3,7 @@ interface Blog {
   Description: string;
   Preview?: string;
   Blog: string;
+  Date: number; //Date in MS since epoch
 }
 
 export default Blog;

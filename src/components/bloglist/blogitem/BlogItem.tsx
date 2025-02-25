@@ -1,3 +1,4 @@
+import formatDate from "../../../helpers/DateHelper.tsx";
 import Blog from "../../../model/Blog.tsx";
 
 interface BlogItemProps {
@@ -6,6 +7,7 @@ interface BlogItemProps {
 }
 
 function BlogItem({ id, blog }: BlogItemProps) {
+  
   return (
     <div className="max-w-100 p-5">
       <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -17,10 +19,13 @@ function BlogItem({ id, blog }: BlogItemProps) {
               src={import.meta.env.BASE_URL + "assets/previews/" + blog.Preview}
               alt="blog image"
             />
-          )}
+          )} 
           <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {blog.Name}
           </h2>
+          <p className="mb-2 tracking-tight text-gray-900 dark:text-gray-600">
+            {formatDate(new Date(blog.Date))}
+          </p>
           {blog.Description.split("\n").map((item, index) => {
             return (
               <p
@@ -36,5 +41,4 @@ function BlogItem({ id, blog }: BlogItemProps) {
     </div>
   );
 }
-
 export default BlogItem;

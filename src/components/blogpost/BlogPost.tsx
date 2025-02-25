@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Blog from "../../model/Blog.tsx";
 import blogs from "../../../assets/blogs.json" with { type: "json" };
 import FourOFour from "../FourOFour.tsx";
+import formatDate from "../../helpers/DateHelper.tsx";
 
 function BlogPost() {
   const { id } = useParams();
@@ -32,6 +33,9 @@ function BlogPost() {
             <h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {blog.Name}
             </h2>
+            <p className="mb-2 tracking-tight text-gray-900 dark:text-gray-600">
+            {formatDate(new Date(blog.Date))}
+          </p>
             <hr className="w-full h-px my-3 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="font-light text-gray-500 ">
               <div className="mb-6">
