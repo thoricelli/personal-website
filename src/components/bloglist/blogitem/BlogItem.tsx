@@ -7,8 +7,7 @@ interface BlogItemProps {
 
 function BlogItem({ id, blog }: BlogItemProps) {
   return (
-    <div className="max-w-100 p-5">
-      <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
+    <div className="max-w-100 ps-5 pe-5">
       <a href={`#/blog/${id}`}>
         <article className="grid justify-items-center my-5 text-center p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           {blog.Preview != null && (

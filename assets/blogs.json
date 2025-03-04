@@ -3,6 +3,16 @@
     "Name": "Hello World!",
     "Description": "Hi, this is my personal website.\nI'll be posting mostly tech related stuff that I want to share info about!",
     "Blog": "Hello_World.MD",
-    "Preview": "hello_world.png"
+    "Preview": "hello_world.png",
+    "Date": 1738446219000,
+    "Category": 0
+  },
+  "test": {
+    "Name": "v1.0.0 changelog",
+    "Description": "Hi everyone!\nv1.0.0 got released.\nHere are some of its new features.",
+    "Blog": "editor/v1_0_0.MD",
+    "Preview": "hello_world.png",
+    "Date": 1741126330614,
+    "Category": 1
   }
 }
