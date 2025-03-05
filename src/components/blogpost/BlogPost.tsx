@@ -74,7 +74,7 @@ function BlogPost() {
                       },
                       p(props: { [x: string]: any; node: any }) {
                         const { node, ...rest } = props;
-                        return <p className="my-5 whitespace-pre-wrap" {...rest} />;
+                        return <p className="my-2 whitespace-pre-wrap" {...rest} />;
                       },
                       a(props: { [x: string]: any; node: any }) {
                         const { node, ...rest } = props;
