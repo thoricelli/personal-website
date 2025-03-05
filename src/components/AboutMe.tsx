@@ -18,7 +18,7 @@ function AboutMe() {
           Hi, my name is Roan (thoricelli). <br></br> I'm a software developer
           from Belgium.
         </p>
-        <hr className="h-px w-full my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+        <hr className="h-px w-full my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
         <p>
           What I enjoy the most is building open-source projects for the
           community, working with low-end systems and playing games with my
