@@ -7,9 +7,9 @@
     "Date": 1738446219000,
     "Category": 0
   },
-  "test": {
+  "version-1-0-0": {
     "Name": "Version 1.0.0 patch notes",
-    "Description": "Hello everyone, version 1.0.0 is finally here, here are some of its new features.",
+    "Description": "Hello everyone, version 1.0.0 is finally here.\nHere are some of its new features.",
     "Blog": "editor/v1_0_0.MD",
     "Preview": "editor.png",
     "Date": 1741126330614,
