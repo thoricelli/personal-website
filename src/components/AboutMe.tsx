@@ -7,9 +7,11 @@ import ChipsChallengeCalc2 from "../../assets/about-me/ChipsChallengeCalc2.png";
 import minesweeper from "../../assets/about-me/minesweeper.png";
 import GameOfLife from "../../assets/about-me/GameOfLife.png";
 import StillwellBrain from "../../assets/about-me/StillwellBrain.png";
+import SH7337 from "../../assets/about-me/sh7337.png";
 import dreamy_beat from "../../assets/about-me/dreamy_beat.wav";
 
 function AboutMe() {
+  //TODO: Fix this messy html man!
   return (
     <div className="grid justify-items-center mt-5 dark:text-white">
       <div className="grid justify-items-center p-5 max-w-xl">
@@ -27,6 +29,31 @@ function AboutMe() {
         <h1 className="my-2 font-extrabold leading-none tracking-tight text-gray-900 text-xl dark:text-white">
           What I work on currently
         </h1>
+        <h2 className="my-2 font-extrabold leading-none tracking-tight text-gray-900 text-lg dark:text-white">
+          SH7337 Emulator
+        </h2>
+        <p>
+          I'm trying to recreate an emulator for my Casio Graph 35+ e, which
+          uses the Renesas SH7337 CPU. This includes GDB support for debugging.
+        </p>
+        <p>
+          I decided to create this emulator because I couldn't find a proper way
+          to debug addins for the Casio Graph.
+        </p>
+        <p>
+          This emulator is currently a work in progress, a lot has to still be
+          done!
+        </p>
+        <img className="my-2 rounded-lg" src={SH7337}></img>
+        <a
+          className="my-2"
+          href="https://github.com/thoricelli/SH7337-Emulator.git"
+        >
+          <img
+            src="https://github-readme-stats.vercel.app/api/pin/?username=thoricelli&repo=SH7337-Emulator&theme=dark"
+            alt="GitHub Stats"
+          />
+        </a>
         <h2 className="my-2 font-extrabold leading-none tracking-tight text-gray-900 text-lg dark:text-white">
           PICO 4 Pro
         </h2>
