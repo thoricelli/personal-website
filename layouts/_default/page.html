@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+  <div class="center-content m-1">
+    <div class="blog-top-items">
+      {{ with .Resources.GetMatch .Params.thumbnail }}
+      <div class="flex blog-thumbnail">
+        <img class="thumbnail" src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
+      </div>
+      {{ end }}
+      <span class="blog-title">{{ .Title }}</span>
+      {{ with .Params.subject }}
+      <p class="subject">{{ . }}</p>
+      {{ end }}
+      <span class="date">{{ .Date.Format "02 January 2006"}}</span>
+    </div>
+    <article>{{ .Content }}</article>
+  </div>
+</main>
+{{ end }}

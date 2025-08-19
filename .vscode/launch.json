@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hugo Serve",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/hugo/hugo",
+      "args": ["serve"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Hugo Production",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/hugo/hugo",
+      "args": ["--minify"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

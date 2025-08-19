@@ -1,0 +1,15 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "Thoricelli's devving journey"
+disableKinds = ['taxonomy', 'term']
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
