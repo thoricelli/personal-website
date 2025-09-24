@@ -12,28 +12,29 @@
   <body>
     <!--Header-->
     <header class="flex">
-      <!--Hat color-->
-      <div class="hat-logo">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xml:space="preserve"
-          width="fit-content"
-          height="100%"
-          viewBox="0 0 36.993 23.279"
-        >
-          <g style="display: inline">
-            <path
-              d="M81.289 97.324c-7.046.82-13.61 1.118-20.648 2.016-7.21.58-8.512 5.98-7.15 12.135l8.72-1.214c2.952-.411 5.928-.581 8.908-.686l15.18-.235-.056-4.295c.156-2.723-.164-7.944-4.954-7.72zm5.01 15.016-14.82.444c-3.205.036-6.403.35-9.581.758l-7.824 1.007.309 1.987c-2.452.278-3.92 3.694-1.742 4.06h34.954c1.479 0 1.454-4.308-1.296-5.175z"
-              style="fill: #ffffff"
-              transform="translate(-51.58 -97.317)"
-            />
-          </g>
-        </svg>
+      <div class="flex">
+        <!--Hat color-->
+        <div class="hat-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve"
+            width="fit-content"
+            height="100%"
+            viewBox="0 0 36.993 23.279"
+          >
+            <g style="display: inline">
+              <path
+                d="M81.289 97.324c-7.046.82-13.61 1.118-20.648 2.016-7.21.58-8.512 5.98-7.15 12.135l8.72-1.214c2.952-.411 5.928-.581 8.908-.686l15.18-.235-.056-4.295c.156-2.723-.164-7.944-4.954-7.72zm5.01 15.016-14.82.444c-3.205.036-6.403.35-9.581.758l-7.824 1.007.309 1.987c-2.452.278-3.92 3.694-1.742 4.06h34.954c1.479 0 1.454-4.308-1.296-5.175z"
+                style="fill: #ffffff"
+                transform="translate(-51.58 -97.317)"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="center-flex">
+          <h1>Thor's website</h1>
+        </div>
       </div>
-      <div class="center-flex">
-        <h1>Thor's website</h1>
-      </div>
-      <div></div>
     </header>
 
     {{ block "main" . }} {{ end }}

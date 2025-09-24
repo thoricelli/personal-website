@@ -116,6 +116,7 @@ p:has(img) {
 }
 
 img {
+  min-width: 0;
   width: 100%;
 }
 
