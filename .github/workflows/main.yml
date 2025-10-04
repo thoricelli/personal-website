@@ -6,16 +6,6 @@ on:
 
 jobs:
   build:
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    concurrency:
-      group: "pages"
-      cancel-in-progress: false
-    environment:
-      name: github-pages
-      url: https://www.thorgoesdevving.com/
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
@@ -26,26 +16,3 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifact
-          path: dist
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./public"
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        env:
-          url: ${{ steps.deployment.outputs.page_url }}
