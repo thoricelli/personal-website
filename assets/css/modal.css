@@ -1,0 +1,87 @@
+.modal-backdrop {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 1;
+
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background-color: #171717;
+
+  transition: opacity 400ms ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+[modal-backdrop-active="true"] {
+  pointer-events: all;
+  opacity: 1 !important;
+}
+
+[zoom-image="true"] {
+  position: relative;
+  z-index: 15;
+  transition: transform 400ms;
+  pointer-events: none;
+}
+
+.modal-img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  opacity: 0;
+  width: auto;
+  max-height: 80%;
+}
+
+[image-active="true"] {
+  display: block;
+}
+
+/*[image-focus="true"] {
+  position: relative;
+  z-index: 10;
+  transition: 1s;
+}*/
+
+.close {
+  pointer-events: none;
+  z-index: 10;
+
+  opacity: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+  cursor: pointer;
+
+  margin: 3rem;
+  font-size: xx-large;
+
+  transition: opacity 400ms;
+}
+
+.modal-caption {
+  z-index: 2;
+  text-align: center;
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.fixed-clickable {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}

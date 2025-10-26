@@ -1,19 +1,70 @@
+{{ define "head" }}
+  <title>{{ .Title }}</title>
+  <link href="/css/katex.min.css" rel="stylesheet" />
+
+  <meta name="description" content="{{ .Summary }}" />
+  {{- if .Params.subject }}
+    {{- $subject := .Params.subject }}
+    <meta name="keywords" content="{{ $subject }}" />
+  {{- end }}
+
+
+  <link rel="author" href="https://github.com/thoricelli" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://thorgoesdevving.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:description" content="{{ .Summary }}" />
+
+  {{- with .Params.thumbnail }}
+    {{- with $.Resources.GetMatch . }}
+      <meta property="og:image" content="{{ .RelPermalink }}" />
+    {{- end }}
+  {{- end }}
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="thorgoesdevving.com" />
+  <meta property="twitter:url" content="https://thorgoesdevving.com" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Summary }}" />
+  {{- with .Params.thumbnail }}
+    {{- with $.Resources.GetMatch . }}
+      <meta name="twitter:image" content="{{ .RelPermalink }}" />
+    {{- end }}
+  {{- end }}
+{{ end }}
+
 {{ define "main" }}
-<main>
-  <div class="center-content m-1">
-    <div class="blog-top-items">
-      {{ with .Resources.GetMatch .Params.thumbnail }}
-      <div class="flex blog-thumbnail">
-        <img class="thumbnail" src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
+  <section>
+    <div style="margin: 1rem; width:100%" class="center-content">
+      <!--Top information-->
+      <div class="blog-top-items">
+        {{ with .Resources.GetMatch .Params.thumbnail }}
+          <div style="display:flex;" class="blog-thumbnail">
+            <img
+              style="object-fit: contain;"
+              src="{{ .RelPermalink }}"
+              alt="{{ $.Title }}"
+            />
+          </div>
+        {{ end }}
+        <span class="blog-title">{{ .Title }}</span>
+        {{ with .Params.subject }}
+          <p class="subject">{{ . }}</p>
+        {{ end }}
+        <span class="date">{{ .Date.Format "02 January 2006" }}</span>
       </div>
+
+      <!--Main content-->
+      <article>{{ .Content }}</article>
+
+      <!--Comments-->
+      {{ if .Params.comments }}
+        {{ partial "comments.html" }}
       {{ end }}
-      <span class="blog-title">{{ .Title }}</span>
-      {{ with .Params.subject }}
-      <p class="subject">{{ . }}</p>
-      {{ end }}
-      <span class="date">{{ .Date.Format "02 January 2006"}}</span>
     </div>
-    <article>{{ .Content }}</article>
-  </div>
-</main>
+  </section>
 {{ end }}

@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://thorgoesdevving.com/'
 languageCode = 'en-us'
 title = "Thoricelli's devving journey"
 disableKinds = ['taxonomy', 'term']
@@ -11,5 +11,15 @@ disableKinds = ['taxonomy', 'term']
     lineNoStart = 1
     lineNos = true
     noClasses = false
+    lineNumbersInTable = false
     style = "monokai"
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$', '$']]
+          inline = [['\(', '\)']]
+      [markup.goldmark.extensions.typographer]
+        disable = true

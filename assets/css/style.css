@@ -1,100 +1,3 @@
-/*GEN.*/
-:root {
-  --primary: #d91c30;
-  --secondary: #ffff;
-}
-
-body {
-  font-family: monospace;
-  font-size: large;
-
-  background-color: #171717;
-  color: var(--secondary);
-
-  margin: 0;
-
-  line-height: 1.5;
-}
-
-.blog-title {
-  color: var(--primary);
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: bolder;
-}
-
-.blog-title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.flex {
-  display: flex;
-}
-
-.hat-logo {
-  padding: 1rem;
-}
-
-.center-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-header {
-  height: 5rem;
-  gap: 1rem;
-  justify-content: center;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary);
-}
-
-p {
-  margin: 0;
-  color: #e5e5e5;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
-.center-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 40rem;
-}
-
-.m-1 {
-  margin: 1rem;
-}
-
-.date {
-  color: #8f8f8f;
-  font-size: larger;
-}
-
-.article-item {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .article-item:hover {
   background-color: #202020;
   cursor: pointer;
@@ -116,84 +19,35 @@ p:has(img) {
   padding-right: 2rem;
 }
 
-img {
-  min-width: 0;
-  width: 100%;
-}
-
-figcaption {
-  display: flex;
-  justify-content: center;
-}
-
-figcaption p {
-  color: #686868;
-}
-
-.article-divider {
-  display: flex;
-}
-
-.blog-item {
-  width: 40rem;
-}
-
-.blog-center-items {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.about-me-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-hr {
-  width: 100%;
-}
-
 .grid-col-2 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.w-15r {
-  width: 15rem;
+pre {
+  overflow: auto;
 }
 
-.thumbnail {
-  height: auto;
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #393812;
+}
+
+.zoomable,
+article img {
+  cursor: zoom-in;
+}
+
+.plantuml-diagram {
   display: flex;
   justify-content: center;
-  flex-shrink: 0;
-  object-fit: contain;
+  align-items: center;
 }
 
-.blog-thumbnail {
-  height: 10rem;
-  justify-content: center;
-}
-
-.blog-top-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.subject {
-  width: fit-content;
-  background-color: #262626;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+.katex {
+  white-space: normal !important;
 }

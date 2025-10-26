@@ -1,0 +1,13 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Work in progress, will serve as a little blog website / portfolio.",
+  "scripts": {
+    "dev": "hugo serve --buildFuture --buildDrafts --disableFastRender",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15"
+  }
+}

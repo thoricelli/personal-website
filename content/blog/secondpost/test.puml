@@ -1,0 +1,12 @@
+@startuml Test
+
+skinparam backgroundColor transparent
+
+start
+:Find PUML shortcode in markdown;
+:Process PUML into SVG;
+:Replace shortcode with img;
+:Done!;
+end
+
+@enduml

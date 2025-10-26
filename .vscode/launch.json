@@ -2,19 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch file",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "./hugo-puml/hugo-puml.go"
+    },
+    {
       "name": "Hugo Serve",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/hugo/hugo",
-      "args": ["serve"],
+      "runtimeExecutable": "npm",
+      "args": ["run", "dev"],
       "console": "integratedTerminal"
     },
     {
       "name": "Hugo Production",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/hugo/hugo",
-      "args": ["--minify"],
+      "runtimeExecutable": "npm",
+      "args": ["run", "build"],
       "console": "integratedTerminal"
     }
   ]

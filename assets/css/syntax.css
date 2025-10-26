@@ -11,13 +11,13 @@
   background-color: #272822;
 }
 /* Other */
-.chroma .x {
-}
+/*.chroma .x {
+}*/
 /* Error */
-.chroma .err {
+/*.chroma .err {
   color: #960050;
   background-color: #1e0010;
-}
+}*/
 /* CodeLine */
 .chroma .cl {
 }
@@ -96,8 +96,8 @@
   color: #66d9ef;
 }
 /* Name */
-.chroma .n {
-}
+/*.chroma .n {
+}*/
 /* NameAttribute */
 .chroma .na {
   color: #a6e22e;
@@ -115,50 +115,50 @@
   color: #a6e22e;
 }
 /* NameEntity */
-.chroma .ni {
-}
+/*.chroma .ni {
+}*/
 /* NameException */
 .chroma .ne {
   color: #a6e22e;
 }
 /* NameLabel */
-.chroma .nl {
-}
+/*.chroma .nl {
+}*/
 /* NameNamespace */
-.chroma .nn {
-}
+/*.chroma .nn {
+}*/
 /* NameOther */
 .chroma .nx {
   color: #a6e22e;
 }
 /* NameProperty */
-.chroma .py {
-}
+/*.chroma .py {
+}*/
 /* NameTag */
 .chroma .nt {
   color: #f92672;
 }
 /* NameBuiltin */
-.chroma .nb {
-}
+/*.chroma .nb {
+}*/
 /* NameBuiltinPseudo */
-.chroma .bp {
-}
+/*.chroma .bp {
+}*/
 /* NameVariable */
-.chroma .nv {
-}
+/*.chroma .nv {
+}*/
 /* NameVariableClass */
-.chroma .vc {
-}
+/*.chroma .vc {
+}*/
 /* NameVariableGlobal */
-.chroma .vg {
-}
+/*.chroma .vg {
+}*/
 /* NameVariableInstance */
-.chroma .vi {
-}
+/*.chroma .vi {
+}*/
 /* NameVariableMagic */
-.chroma .vm {
-}
+/*.chroma .vm {
+}*/
 /* NameFunction */
 .chroma .nf {
   color: #a6e22e;
@@ -268,8 +268,8 @@
   color: #f92672;
 }
 /* Punctuation */
-.chroma .p {
-}
+/*.chroma .p {
+}*/
 /* Comment */
 .chroma .c {
   color: #75715e;
@@ -299,8 +299,8 @@
   color: #75715e;
 }
 /* Generic */
-.chroma .g {
-}
+/*.chroma .g {
+}*/
 /* GenericDeleted */
 .chroma .gd {
   color: #f92672;
@@ -310,21 +310,21 @@
   font-style: italic;
 }
 /* GenericError */
-.chroma .gr {
-}
+/*.chroma .gr {
+}*/
 /* GenericHeading */
-.chroma .gh {
-}
+/*.chroma .gh {
+}*/
 /* GenericInserted */
 .chroma .gi {
   color: #a6e22e;
 }
 /* GenericOutput */
-.chroma .go {
-}
+/*.chroma .go {
+}*/
 /* GenericPrompt */
-.chroma .gp {
-}
+/*.chroma .gp {
+}*/
 /* GenericStrong */
 .chroma .gs {
   font-weight: bold;
@@ -334,11 +334,11 @@
   color: #75715e;
 }
 /* GenericTraceback */
-.chroma .gt {
-}
+/*.chroma .gt {
+}*/
 /* GenericUnderline */
-.chroma .gl {
-}
+/*.chroma .gl {
+}*/
 /* TextWhitespace */
-.chroma .w {
-}
+/*.chroma .w {
+}*/

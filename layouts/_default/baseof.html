@@ -1,26 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en" charset="utf-8">
   <head>
-    <link rel="icon" href="/img/logo.svg" sizes="any" type="image/svg+xml" />
-    {{ $css := resources.Get "css/style.css" | minify }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
-    {{ $syntax := resources.Get "css/syntax.css" | minify }}
-    <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" />
-    <title>Thor's website</title>
+    <!--Above the fold-->
+    <style>
+      :root {
+        --primary: #d91c30;
+        --secondary: #eef1f5;
+      }
+
+      body {
+        font:
+          18px Menlo,
+          Consolas,
+          "DejaVu Sans Mono",
+          "Liberation Mono",
+          monospace;
+
+        background-color: #171717;
+        color: var(--secondary);
+
+        line-height: 1.8;
+
+        margin: 0;
+      }
+
+      .center-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .blog-title {
+        color: var(--primary);
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bolder;
+      }
+
+      .blog-title a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary);
+      }
+
+      p {
+        color: var(--secondary);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+      }
+
+      .date {
+        color: #8f8f8f;
+        font-size: larger;
+      }
+
+      .center-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 50rem;
+        margin: 0 1rem;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+      }
+
+      .blog-item {
+        flex-direction: column;
+        gap: 1rem;
+        width: 50rem;
+        padding: 1rem;
+      }
+
+      img {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      hr {
+        width: 100%;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      figcaption {
+        display: flex;
+        justify-content: center;
+      }
+
+      figcaption p,
+      .muted-text {
+        color: #686868;
+      }
+
+      .subject {
+        width: fit-content;
+        background-color: #262626;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .article-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .blog-thumbnail {
+        height: 10rem;
+        justify-content: center;
+      }
+
+      .blog-top-items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 1rem;
+      }
+
+      @media (width < 500px) {
+        .header-text {
+          display: none;
+        }
+      }
+    </style>
+
+    {{ $styles := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.RelPermalink }}"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNyAyMy4zIj48ZyBzdHlsZT0iZGlzcGxheTppbmxpbmUiPjxwYXRoIGQ9Ik04MS4yOSA5Ny4zMmMtNy4wNS44Mi0xMy42MSAxLjEyLTIwLjY1IDIuMDItNy4yLjU4LTguNTEgNS45OC03LjE1IDEyLjE0bDguNzItMS4yMmMyLjk1LS40MSA1LjkzLS41OCA4LjktLjY5bDE1LjE5LS4yMy0uMDYtNC4zYy4xNi0yLjcyLS4xNi03Ljk0LTQuOTUtNy43Mm01IDE1LjAyLTE0LjgxLjQ0Yy0zLjIuMDQtNi40LjM1LTkuNTguNzZsLTcuODMgMSAuMzEgMmMtMi40NS4yNy0zLjkyIDMuNjktMS43NCA0LjA2SDg3LjZjMS40OCAwIDEuNDYtNC4zMS0xLjMtNS4xOHoiIHN0eWxlPSJmaWxsOiMwMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MS41OCAtOTcuMzIpIi8+PHBhdGggZD0ibTU1Ljk2IDExMS45IDcuMzctMS4wNWE2MCA2MCAxNzUuNSAwIDEgNy41My0uNmwxMi44My0uMnYyLjZsLTEyLjUzLjM4YTgxIDgxIDE3NS4zNyAwIDAtOC4xLjY2bC02LjYuODd6IiBzdHlsZT0iZmlsbDojZmMwIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjE4MzEgMCAwIDEuMTU2NyAtNjQuMyAtMTE1LjI4KSIvPjwvZz48L3N2Zz4="
+    />
+
+    <meta
+      name="google-site-verification"
+      content="xY13uQv7r2wgMVRu5tlSK9PAxeMX4qBtc_zt-J6e748"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{ block "head" . }}{{ end }}
   </head>
   <body>
     <!--Header-->
-    <header class="flex">
-      <div class="flex">
+    <header
+      style="height: 4rem; gap: 1rem; justify-content: center; margin-bottom: 1rem; display:flex;"
+    >
+      <div style="display:flex">
         <!--Hat color-->
-        <div class="hat-logo">
+        <div style="padding: 0.5rem 1rem;">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xml:space="preserve"
-            width="fit-content"
             height="100%"
             viewBox="0 0 36.993 23.279"
+            aria-label="Hat logo"
           >
             <g style="display: inline">
               <path
@@ -31,12 +197,44 @@
             </g>
           </svg>
         </div>
-        <div class="center-flex">
+        <div class="header-text center-flex">
           <h1>Thor's website</h1>
         </div>
       </div>
     </header>
 
-    {{ block "main" . }} {{ end }}
+    {{ block "main" . }}{{ end }}
+
+
+    <footer>
+      <small
+        >Copyright ©
+        {{ now.Format "2006" }}
+        <a href="https://github.com/thoricelli" target="_blank">Thoricelli</a
+        ><br />Static pages generated with
+        <a href="https://gohugo.io/" target="_blank">Hugo</a>.</small
+      >
+    </footer>
   </body>
+
+  {{ partial "modal.html" }}
+
+
+  <!--Modal script-->
+  {{ with resources.Get "js/modal.ts" }}
+    {{ $opts := dict
+      "minify" (not hugo.IsDevelopment)
+      "sourceMap" (cond hugo.IsDevelopment "linked" "")
+      "targetPath" "js/modal.js"
+    }}
+    {{ $modal := . | js.Build $opts }}
+
+    {{ with . | fingerprint }}
+      <script
+        src="{{ $modal.RelPermalink }}"
+        integrity="{{ $modal.Data.Integrity }}"
+        crossorigin="anonymous"
+      ></script>
+    {{ end }}
+  {{ end }}
 </html>
