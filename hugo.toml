@@ -1,7 +1,15 @@
 baseURL = 'https://thorgoesdevving.com/'
 languageCode = 'en-us'
 title = "Thoricelli's devving journey"
+copyright = 'Copyright Thoricelli. All rights reserved.'
+
 disableKinds = ['taxonomy', 'term']
+
+[params]
+  author = 'thoricelli'
+
+[outputs]
+  home = ['html']
 
 [markup]
   [markup.highlight]

@@ -14,7 +14,7 @@
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://thorgoesdevving.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:title" content="Thor's website - {{ .Title }}" />
   <meta property="og:description" content="{{ .Summary }}" />
 
   {{- with .Params.thumbnail }}
@@ -28,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="twitter:domain" content="thorgoesdevving.com" />
   <meta property="twitter:url" content="https://thorgoesdevving.com" />
-  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:title" content="Thor's website - {{ .Title }}" />
   <meta name="twitter:description" content="{{ .Summary }}" />
   {{- with .Params.thumbnail }}
     {{- with $.Resources.GetMatch . }}
@@ -38,8 +38,8 @@
 {{ end }}
 
 {{ define "main" }}
-  <section>
-    <div style="margin: 1rem; width:100%" class="center-content">
+  <section style="margin: 1rem;">
+    <div class="center-content">
       <!--Top information-->
       <div class="blog-top-items">
         {{ with .Resources.GetMatch .Params.thumbnail }}
@@ -56,6 +56,27 @@
           <p class="subject">{{ . }}</p>
         {{ end }}
         <span class="date">{{ .Date.Format "02 January 2006" }}</span>
+        <a
+          class="rss"
+          title="Subscribe to the RSS feed!"
+          href="/blog/index.xml"
+          target="_blank"
+        >
+          <svg
+            class="primary"
+            xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve"
+            height="100%"
+            viewBox="-271 273 256 256"
+          >
+            <path
+              d="M-271 360v48.9c31.9 0 62.1 12.6 84.7 35.2s35.1 52.8 35.1 84.8v.1h49.1c0-46.6-19-88.7-49.6-119.4-30.5-30.6-72.7-49.5-119.3-49.6zM-237 460.9c-9.4 0-17.8 3.8-24 10s-10 14.6-10 24c0 9.3 3.8 17.7 10 23.9 6.2 6.1 14.6 9.9 24 9.9s17.8-3.7 24-9.9 10-14.6 10-23.9c0-9.4-3.8-17.8-10-24-6.2-6.2-14.6-10-24-10z"
+            />
+            <path
+              d="M-90.1 348.1c-46.3-46.4-110.2-75.1-180.8-75.1v48.9c114.1.1 206.8 93 206.9 207.1h49c0-70.6-28.7-134.5-75.1-180.9z"
+            />
+          </svg>
+        </a>
       </div>
 
       <!--Main content-->
