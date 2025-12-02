@@ -15,3 +15,6 @@ plantuml.jar
 /.hugo_build.lock
 
 /node_modules/
+
+# Blog posts that didn't make it!
+/trash_bin/

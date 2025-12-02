@@ -1,0 +1,16 @@
+@startuml Teeth
+!include chips_challenge.puml
+
+class Teeth {
+    + Enemy(code: Objects, ???)
+}
+
+Enemy <|-- Teeth
+note on link 
+Not possible since
+teeth doesn't
+have predetermined 
+directions.
+end note
+
+@enduml

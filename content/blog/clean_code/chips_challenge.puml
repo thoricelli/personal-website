@@ -1,0 +1,32 @@
+@startuml Chip's challenge
+
+skinparam backgroundColor transparent
+skinparam ArrowColor white
+
+class Entity {
+    + Kill(killedBy: Objects) : void
+    + Move(velocity: Vector2): bool
+}
+
+class Player {
+    + Kill(killedBy: Objects): void
+}
+
+class Enemy {
+    + Enemy(code: Objects, directions: List<Direction>)
+    ---
+    + Kill(killedBy: Objects): void
+    + Move(velocity: Vector2): bool
+    + Update(): void
+    + CheckMovement(position: Vector2): bool
+    + CanMoveTo(code: Objects, movingTo: Vector2): bool
+}
+
+class Bug {
+    + Enemy(code: Objects, directions: List<Directions>)
+}
+
+Entity <|-- Player
+Entity <|-- Enemy
+Enemy <|-- Bug
+@enduml
