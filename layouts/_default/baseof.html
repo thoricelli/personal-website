@@ -7,6 +7,7 @@
       :root {
         --primary: #d91c30;
         --secondary: #eef1f5;
+        --block: #262626;
       }
 
       .primary {
@@ -96,6 +97,7 @@
       img {
         min-width: 0;
         max-width: 100%;
+        image-rendering: pixelated;
       }
 
       hr {
@@ -120,7 +122,7 @@
 
       .subject {
         width: fit-content;
-        background-color: #262626;
+        background-color: var(--block);
         padding: 0.5rem;
         margin-bottom: 0.5rem;
       }
@@ -163,6 +165,23 @@
         justify-content: center;
         width: fit-content;
         height: 1rem;
+      }
+
+      ul {
+        margin: 0;
+      }
+
+      figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      code:not(pre.chroma code) {
+        background-color: var(--block);
+        padding: 0.25rem;
       }
 
       @media (width < 500px) {
