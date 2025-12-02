@@ -84,8 +84,8 @@ And well, nothing, if it is used correctly.
 
 Inheritance is very much a practical way of reusing code, it's simple and can easily be implemented.
 
-**But** it backs the developer into a corner later on by making the system _extremely_ coupled and requiring.  
-And if you've used inheritance before, you've surely felt how [tightly coupled](<https://en.wikipedia.org/wiki/Coupling_(computer_programming)>) the system becomes.
+**But** it backs the developer into a corner later on by making the system _extremely_ coupled.  
+If you've used inheritance before, you've surely felt how [tightly coupled](<https://en.wikipedia.org/wiki/Coupling_(computer_programming)>) the system becomes.
 
 Let's take a look at how inheritance broke down for me.
 
