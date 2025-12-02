@@ -13,4 +13,9 @@
     alt="{{ .Get "alt" | default "PlantUML Diagram" }}"
     loading="lazy"
   />
+  {{ with (.Get "caption") }}
+    <figcaption>
+      <p>{{ . }}</p>
+    </figcaption>
+  {{ end }}
 </div>

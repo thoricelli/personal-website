@@ -18,8 +18,11 @@ const (
 )
 
 var diagrams int
+var currentDirectory string
 
 func main() {
+    currentDirectory, _ = os.Getwd()
+
     err := os.RemoveAll(outputDir)
 
     if (err != nil) {
@@ -67,7 +70,7 @@ func walkMarkdowns(path string, dirEntry fs.DirEntry, err error) error {
     outFile := filepath.Join(outputDir, folderName + "-" + hashStr + ".svg")
 
     if _, err := os.Stat(outFile); os.IsNotExist(err) {
-        err := renderSVG(uml, outFile)
+        err := renderSVG(path, uml, outFile)
 
         if (err != nil){
 			fmt.Fprintf(os.Stderr, "Failed to render %s: %v\n", outFile, err)
@@ -83,8 +86,12 @@ func walkMarkdowns(path string, dirEntry fs.DirEntry, err error) error {
     return nil
 }
 
-func renderSVG(uml, outPath string) error {
-    cmd := exec.Command("java", "-jar", "plantuml.jar", "-tsvg", "-pipe")
+func renderSVG(currentPath, uml, outPath string) error {
+    cmd := exec.Command("java", "-jar", filepath.Join(currentDirectory, "plantuml.jar"), "-tsvg", "-pipe")
+
+    dir := filepath.Dir(currentPath)
+
+    cmd.Dir = dir
     cmd.Stdin = strings.NewReader(uml)
     
     var out bytes.Buffer
