@@ -56,4 +56,4 @@ $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
 I can also embed puml diagrams.
 
-{{<plantuml src="test.puml" max-height="1">}}
+{{<plantuml src="test.puml">}}

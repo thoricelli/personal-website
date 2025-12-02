@@ -11,6 +11,11 @@ disableKinds = ['taxonomy', 'term']
 [outputs]
   home = ['html']
 
+[markup.tableOfContents]
+  startLevel = 1
+  endLevel = 6
+
+
 [markup]
   [markup.highlight]
     codeFences = true
