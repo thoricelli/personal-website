@@ -97,7 +97,7 @@ The game is a carbon-copy of [Chip's Challenge](https://en.wikipedia.org/wiki/Ch
 Chip's Challenge is basically a tile-based puzzle game, where you have to solve logic puzzles to get to the end of the level.  
 These "tiles" can be enemies, items that can be picked up, doors, etc...
 
-{{<figure src="ChipTiles.png" caption="Tilesheet from Chip's Challenge.">}}
+{{<figure src="/img/ChipTiles.png" caption="Tilesheet from Chip's Challenge.">}}
 
 ### Practical
 
@@ -167,7 +167,7 @@ If the bug wants to go to a tile, but there is an object in the way it will
 - Right, then
 - Down
 
-{{<figure src="Bug_demo.png" caption="The movement of the bug enemy.">}}
+{{<figure src="/img/Bug_demo.png" caption="The movement of the bug enemy.">}}
 
 Since I knew that nearly all the bugs in the game move in this way, I also abstracted this away into the Enemy class:
 
@@ -215,7 +215,7 @@ public class Bug : Enemy
 }
 ```
 
-{{<plantuml src="chips_challenge.puml" caption="UML structure of implementation">}}
+{{<figure src="/puml/chips_challenge.svg" caption="UML structure of implementation">}}
 
 At the time it really simplified development.  
 The other enemies I implemented worked in the same way, so I could just inherit from `Enemy`, specify the directions and voila!
@@ -230,7 +230,7 @@ Instead of going a predetermined route he will instead chase the `Player`.
 So, well, now my generic `Enemy` class didn't really work anymore for teeth.  
 I would have to pass the directions to the `base()` `Enemy` constructor... which teeth doesn't have, because its AI doesn't work like other enemies.
 
-{{<plantuml src="chips_challenge_teeth.puml" caption="Teeth can't inherit Enemy.">}}
+{{<figure src="/puml/chips_challenge_teeth.svg" caption="Teeth can't inherit Enemy.">}}
 
 What now?  
 Make the `Enemy` even more abstract, and split it off into even more abstractions?  
@@ -473,7 +473,7 @@ Which makes them way more complex than they had to be.
 This mainly happens because I tend to make my abstraction as big, reusable and functional as a [Swiss Army Knife](https://en.wikipedia.org/wiki/Swiss_Army_knife).  
 This mainly links back to the previous [topic](#why).
 
-{{<figure src="Wenger_EvoGrip_S17.JPG" caption="Compare complex abstractions to Swiss Army Knives" credit="https://commons.wikimedia.org/wiki/File:Wenger_EvoGrip_S17.JPG">}}
+{{<figure src="/img/Wenger_EvoGrip_S17.JPG" caption="Compare complex abstractions to Swiss Army Knives" credit="https://commons.wikimedia.org/wiki/File:Wenger_EvoGrip_S17.JPG">}}
 
 A Swiss Army Knife is handy to have!  
 Because it can do so much at the same time.
@@ -482,7 +482,7 @@ However, I don't see people using these knives to do basic tasks, you use tools 
 
 Have a look at [this](https://github.com/samuelmarina/is-even) repository.
 
-![is-even](./is-even.png)
+![is-even](./img/is-even.png)
 
 Whilst it's obviously a joke, it does go to show that you can solve problems in even the most complex ways.
 
