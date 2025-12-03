@@ -169,7 +169,17 @@ If the bug wants to go to a tile, but there is an object in the way it will
 
 {{<figure src="/img/Bug_demo.png" caption="The movement of the bug enemy.">}}
 
-Since I knew that nearly all the bugs in the game move in this way, I also abstracted this away into the Enemy class:
+Now there are other enemies like: fireball, rocket, paramecium, etc.  
+These enemies move in almost the same way as the bug does, eg:
+
+- Fireball moves:
+  - UP, RIGHT, LEFT, DOWN
+- Rocket moves:
+  - UP, LEFT, RIGHT, DOWN
+- Paramecium moves:
+  - RIGHT, UP, LEFT, DOWN
+
+So, since I knew that nearly all the bugs in the game move in this way, I abstracted this away into the Enemy class:
 
 ```csharp
 public abstract class Enemy : Entity
