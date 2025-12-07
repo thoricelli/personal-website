@@ -10,7 +10,7 @@
   >{{- .Text -}}
   </a>
   {{- if strings.FindRE `wikipedia\.org\/.*` .Destination -}}
-  <span class="tooltip">
+  <span data-nosnippet inert class="tooltip">
     <b>Wikipedia:</b>
     <br>
     {{- $parts := split .Destination "/wiki/" -}}
