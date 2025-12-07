@@ -1,9 +1,32 @@
-<a
-  href="{{ .Destination }}"
-  {{ with .Title }}
-    title="{{ . }}"
-  {{ end }}{{ if strings.HasPrefix .Destination  "http" }}
+<span class="link-container">
+  <a
+    href="{{ .Destination }}"
+    {{- with .Title -}}
+      title="{{ . }}"
+    {{- else -}}
+      title="{{ .Destination }}"
+    {{- end -}}
     target="_blank"
-  {{ end }}
-  >{{ .Text }}</a
->
+  >{{- .Text -}}
+  </a>
+  {{- if strings.FindRE `wikipedia\.org\/.*` .Destination -}}
+  <span class="tooltip">
+    <b>Wikipedia:</b>
+    <br>
+    {{- $parts := split .Destination "/wiki/" -}}
+    {{- $page := index $parts 1 -}}
+    {{- $data := dict -}}
+    {{- $url := printf "https://en.wikipedia.org/api/rest_v1/page/summary/%s" $page -}}
+    {{- with try (resources.GetRemote $url) -}}
+      {{- with .Err -}}
+        {{- errorf "%s" . -}}
+      {{- else with .Value -}}
+        {{- $data := . | transform.Unmarshal -}}
+        {{- replaceRE "([^.]*\\.)[\\s\\S]*" "$1" $data.extract -}}
+      {{- else -}}
+        {{- errorf "Unable to get remote resource %q" $url -}}
+      {{- end -}}
+    {{- end -}}
+  </span>
+{{- end -}}
+</span>

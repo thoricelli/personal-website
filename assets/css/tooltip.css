@@ -1,0 +1,33 @@
+.tooltip {
+    display: inline-block;
+    position: absolute;
+
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    color: var(--secondary);
+    padding: 0.5rem;
+    background-color: var(--block);
+
+    width: max-content;
+    max-width: 50rem;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.link-container {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    
+    pointer-events: all;
+}
+
+a:hover ~ .tooltip {
+    opacity: 100;
+    transition: 400ms;
+}

@@ -53,3 +53,7 @@ article img {
 .katex {
   white-space: normal !important;
 }
+
+a:hover {
+  color: color-mix(in srgb, var(--primary) 60%, var(--block) 40%);
+}
