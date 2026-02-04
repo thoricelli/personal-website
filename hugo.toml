@@ -5,6 +5,13 @@ copyright = 'Copyright Thoricelli. All rights reserved.'
 
 disableKinds = ['taxonomy', 'term']
 
+[minify]
+  minifyOutput = true
+
+[minify.tdewolff.html]
+  keepWhitespace = false
+  keepComments = false
+
 [params]
   author = 'thoricelli'
 
