@@ -1,6 +1,6 @@
 baseURL = 'https://thorgoesdevving.com/'
 languageCode = 'en-us'
-title = "Thoricelli's devving journey"
+title = "Thor's website"
 copyright = 'Copyright Thoricelli. All rights reserved.'
 
 disableKinds = ['taxonomy', 'term']

@@ -1,32 +1,34 @@
 {{ define "head" }}
 
+  {{ $Description := "The personal website and blog of thoricelli. Explore my portfolio or my articles of what I'm working on, thinking about and discovering!" }}
+
   <!--Meta tags for SEO-->
-  <title>Thor's website</title>
+  <title>{{ .Title }}</title>
   <meta
     name="description"
-    content="My name is thoricelli. A belgian software developer."
+    content="{{$Description}}"
   />
   <meta name="keywords" content="thoricelli blog" />
   <link rel="author" href="https://github.com/thoricelli" />
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://thorgoesdevving.com" />
+  <meta property="og:url" content="{{.Site.BaseURL}}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Thor's website" />
   <meta
     property="og:description"
-    content="My name is thoricelli. A belgian software developer."
+    content="{{$Description}}"
   />
   <meta property="og:image" content="/img/logo.webp" />
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="twitter:domain" content="thorgoesdevving.com" />
-  <meta property="twitter:url" content="https://thorgoesdevving.com" />
+  <meta property="twitter:url" content="{{.Site.BaseURL}}" />
   <meta name="twitter:title" content="Thor's website" />
   <meta
     name="twitter:description"
-    content="My name is thoricelli. A belgian software developer."
+    content="{{$Description}}"
   />
   <meta name="twitter:image" content="/img/logo.webp" />
 {{ end }}
