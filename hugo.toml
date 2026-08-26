@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = "Thor's website"
 copyright = 'Copyright Thoricelli. All rights reserved.'
 
-disableKinds = ['taxonomy', 'term']
+disableKinds = ['taxonomy', 'term', 'section']
 
 [minify]
   minifyOutput = true

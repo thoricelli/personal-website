@@ -1,0 +1,87 @@
+{{/* Master layout page */}}
+
+
+<!doctype html>
+
+<html lang="en" charset="utf-8">
+  <head>
+    <!--Above the fold-->
+    {{ $aboveTheFold := resources.Match "css_above_the_fold/*" | resources.Concat "css/above.css" | minify }}
+    <style>{{ $aboveTheFold.Content | safeCSS }}</style>
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Blogs on {{ .Site.Title }}"
+      href="/blog/index.xml"
+    />
+    {{ $styles := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.RelPermalink }}"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link rel="icon" href="/img/logo_128x128.webp" />
+
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+
+    <meta
+      name="google-site-verification"
+      content="xY13uQv7r2wgMVRu5tlSK9PAxeMX4qBtc_zt-J6e748"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div style="display:flex">
+        <!--Hat color-->
+        <div style="padding: 0.5rem 1rem;">
+          {{ readFile "assets/svg/icon_white.svg" | safeHTML }}
+        </div>
+        <div class="header-text center-flex">
+          <h1>Thor's website</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Any content defined by the pages. -->
+    {{ block "main" . }}{{ end }}
+
+
+    <footer>
+      <small
+        >Copyright ©
+        {{ now.Format "2006" }}
+        <a href="https://github.com/thoricelli" target="_blank">Thoricelli</a
+        ><br />Static pages generated with
+        <a href="https://gohugo.io/" target="_blank">Hugo</a>.</small
+      >
+    </footer>
+  </body>
+
+  {{ partial "modal.html" }}
+
+
+  <!--Modal script-->
+  {{ with resources.Get "js/modal.ts" }}
+    {{ $opts := dict
+      "minify" (not hugo.IsDevelopment)
+      "sourceMap" (cond hugo.IsDevelopment "linked" "")
+      "targetPath" "js/modal.js"
+    }}
+    {{ $modal := . | js.Build $opts }}
+
+    {{ with . | fingerprint }}
+      <script
+        src="{{ $modal.RelPermalink }}"
+        integrity="{{ $modal.Data.Integrity }}"
+        crossorigin="anonymous"
+      ></script>
+    {{ end }}
+  {{ end }}
+</html>

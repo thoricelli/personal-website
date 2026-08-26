@@ -18,3 +18,5 @@ plantuml.jar
 
 # Blog posts that didn't make it!
 /trash_bin/
+
+package-lock.json
