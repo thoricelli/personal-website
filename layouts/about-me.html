@@ -1,15 +1,19 @@
 {{/* This is the about me page, which explains who I am and what I do. */}}
 
+{{ define "head" }}
+  <title>About me</title>
+
+  {{ $aboveTheFold := resources.Get "css_above_the_fold/pages/about-me.css" | minify }}
+  <style>{{ $aboveTheFold.Content | safeCSS }}</style>
+{{ end }}
+
 {{ define "main" }}
-  <head>
-    <title>About me</title>
-  </head>
-  <section style="margin: 1rem;">
-    <div class="center-content center-flex" style="margin-bottom: 1rem">
-      <section style="text-align:center;">
+  <section class="about-me">
+    <div class="about-me__content">
+      <section class="quick-about-me">
         <div>
           <img
-            style="height: 12.5rem; width: auto"
+            class="quick-about-me__picture"
             loading="lazy"
             src="/img/thor.webp"
           />
@@ -89,7 +93,7 @@
         Casio Graph 35+E calculator. I never ended up fully finishing it but
         trust me, that code is a mess!!
       </p>
-      <div style="display: flex">
+      <div class="image-container">
         <img
           class="zoomable"
           loading="lazy"
@@ -117,8 +121,8 @@
         accidentally wiped the boot ROM from :)
       </p>
       <h4>Other showcases</h4>
-      <div class="grid-col-2">
-        <div class="center-flex">
+      <div class="showcase-grid">
+        <div class="showcase-grid__item">
           <img
             class="zoomable"
             loading="lazy"
@@ -128,7 +132,7 @@
           <p>Game Of Life</p>
         </div>
 
-        <div class="center-flex">
+        <div class="showcase-grid__item">
           <img
             class="zoomable"
             loading="lazy"
@@ -138,7 +142,7 @@
           <p>Stillwell Brain</p>
         </div>
 
-        <div class="center-flex">
+        <div class="showcase-grid__item">
           <img
             class="zoomable"
             loading="lazy"
@@ -149,7 +153,7 @@
         </div>
       </div>
       <h3>Hobbies</h3>
-      <div style="width: 100%">
+      <div class="hobbies-container">
         <p>My non-programmer hobbies have included (over the years):</p>
         <ul>
           <li>Music</li>
@@ -162,7 +166,7 @@
       <audio controls src="/about-me/dreamy_beat.mp3"></audio>
       <p>weatherchannel_beat.mp3</p>
       <audio controls src="/about-me/weatherchannel_beat.mp3"></audio>
-      <p style="width: 100%">Simple model:</p>
+      <p class="simple-model-container">Simple model:</p>
       <img
         class="zoomable"
         loading="lazy"

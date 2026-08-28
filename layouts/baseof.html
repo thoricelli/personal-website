@@ -6,7 +6,7 @@
 <html lang="en" charset="utf-8">
   <head>
     <!--Above the fold-->
-    {{ $aboveTheFold := resources.Match "css_above_the_fold/*" | resources.Concat "css/above.css" | minify }}
+    {{ $aboveTheFold := resources.Get "css_above_the_fold/main.css" | minify }}
     <style>{{ $aboveTheFold.Content | safeCSS }}</style>
 
     <link
@@ -15,6 +15,7 @@
       title="Blogs on {{ .Site.Title }}"
       href="/blog/index.xml"
     />
+
     {{ $styles := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
     <link
       rel="stylesheet"
@@ -23,13 +24,7 @@
       onload="this.media='all'"
     />
     <link rel="icon" href="/img/logo_128x128.webp" />
-
     <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
-
-    <meta
-      name="google-site-verification"
-      content="xY13uQv7r2wgMVRu5tlSK9PAxeMX4qBtc_zt-J6e748"
-    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -37,13 +32,13 @@
   </head>
   <body>
     <!--Header-->
-    <header>
-      <div style="display:flex">
+    <header class="page-header">
+      <div class="page-header__content">
         <!--Hat color-->
-        <div style="padding: 0.5rem 1rem;">
+        <div class="page-header__logo">
           {{ readFile "assets/svg/icon_white.svg" | safeHTML }}
         </div>
-        <div class="header-text center-flex">
+        <div class="page-header__text">
           <h1>Thor's website</h1>
         </div>
       </div>

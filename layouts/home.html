@@ -30,10 +30,10 @@
 {{ define "main" }}
 
   <!-- Quick about me -->
-  <section style="text-align:center;">
+  <section class="quick-about-me">
     <div>
       <img
-        style="height: 12.5rem; width: auto"
+        class="quick-about-me__picture"
         src="/img/thor.webp"
         fetchpriority="high"
         alt="Thor's profile picture"
@@ -41,7 +41,7 @@
       <p>I'm thoricelli</p>
       <p>A Belgian software developer.</p>
       <a href="/about-me">More about me</a>
-      <div style="margin-top: 0.5rem">
+      <div class="quick-about-me__links">
         <a
           href="https://github.com/thoricelli"
           aria-label="My Github profile"
@@ -72,14 +72,14 @@
   <!--Blog posts-->
   <section>
     {{ range (.Site.GetPage "section" "blog").Pages.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}" class="article-item">
-        <div style="display:flex;" class="blog-item">
+      <a href="{{ .RelPermalink }}" class="blog-post blog-post--hoverable">
+        <div class="blog-post__content">
           <div>
-            <span class="blog-title">{{ .Title }}</span>
+            <span class="blog-meta__title">{{ .Title }}</span>
             {{ with .Params.subject }}
-              <p class="subject">{{ . }}</p>
+              <p class="blog-meta__subject">{{ . }}</p>
             {{ end }}
-            <p class="date">{{ .Date.Format "02 January 2006" }}</p>
+            <p class="blog-meta__date">{{ .Date.Format "02 January 2006" }}</p>
           </div>
           {{ .Summary }}
         </div>

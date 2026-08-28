@@ -1,0 +1,41 @@
+.blog-post__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.blog-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-meta__thumbnail-container {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+}
+
+.blog-meta__thumbnail-image {
+  object-fit: contain;
+}
+
+.blog-meta__rss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 1rem;
+}
+
+.blog-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+code:not(pre.chroma code) {
+  background-color: var(--block);
+  padding: 0.25rem;
+}
