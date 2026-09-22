@@ -6,7 +6,7 @@
       "type": "go",
       "request": "launch",
       "mode": "debug",
-      "program": "./hugo-puml/hugo-puml.go"
+      "program": "./mermaid/mermaid.go"
     },
     {
       "name": "Hugo Serve",

@@ -225,7 +225,7 @@ public class Bug : Enemy
 }
 ```
 
-{{<figure src="/puml/chips_challenge.svg" caption="UML structure of implementation" loading="lazy">}}
+{{<figure src="/diagrams/clean_code/chips_challenge.svg" caption="UML structure of implementation" loading="lazy">}}
 
 At the time it really simplified development.  
 The other enemies I implemented worked in the same way, so I could just inherit from `Enemy`, specify the directions and voila!
@@ -240,7 +240,7 @@ Instead of going a predetermined route he will instead chase the `Player`.
 So, well, now my generic `Enemy` class didn't really work anymore for teeth.  
 I would have to pass the directions to the `base()` `Enemy` constructor... which teeth doesn't have, because its AI doesn't work like other enemies.
 
-{{<figure src="/puml/chips_challenge_teeth.svg" caption="Teeth can't inherit Enemy." loading="lazy">}}
+{{<figure src="/diagrams/clean_code/chips_challenge_teeth.svg" caption="Teeth can't inherit Enemy." loading="lazy">}}
 
 What now?  
 Make the `Enemy` even more abstract, and split it off into even more abstractions?  

@@ -52,8 +52,6 @@ a & b & c
 $\text{For } x^2 + bx + a = 0, \text{ there are two solutions: }$
 $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
-## PUML!
+## Mermaid diagrams!
 
-I can also embed puml diagrams.
-
-{{<figure src="/diagrams/secondpost-a13de0a2.svg">}}
+{{<figure src="/diagrams/secondpost/test.svg">}}
