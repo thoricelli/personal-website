@@ -68,7 +68,7 @@ func walkMarkdowns(path string, dirEntry fs.DirEntry, err error) error {
 func renderSVG(currentPath string, out string) {
 	os.MkdirAll(filepath.Dir(out), 0755)
 
-	cmd := exec.Command("mmdc", "-i", currentPath, "-o", out, "-c", "mermaid/mermaid-config.json", "-b", "transparent")
+	cmd := exec.Command("npx", "mmdc", "-i", currentPath, "-o", out, "-c", "mermaid/mermaid-config.json", "-b", "transparent")
 
 	dir, _ := os.Getwd()
 
