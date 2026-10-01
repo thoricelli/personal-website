@@ -4,7 +4,8 @@
   "description": "Work in progress, will serve as a little blog website / portfolio.",
   "scripts": {
     "dev": "hugo serve --buildFuture --buildDrafts --disableFastRender",
-    "build": "hugo --minify"
+    "build": "hugo --minify",
+    "mermaid": "go run ./mermaid/mermaid.go"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
