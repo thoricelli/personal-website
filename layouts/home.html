@@ -72,7 +72,7 @@
   <!--Blog posts-->
   <section>
     {{ range (.Site.GetPage "section" "blog").Pages.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}" class="blog-post blog-post--hoverable">
+      <div onclick="location.href={{ .RelPermalink }}" class="blog-post blog-post--hoverable">
         <div class="blog-post__content">
           <div>
             <span class="blog-meta__title">{{ .Title }}</span>
@@ -83,7 +83,7 @@
           </div>
           {{ .Summary }}
         </div>
-      </a>
+      </div>
     {{ end }}
   </section>
 {{ end }}

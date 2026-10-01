@@ -1,7 +1,13 @@
 :root {
   --primary: #d91c30;
   --secondary: #eef1f5;
+  
   --block: #262626;
+
+  --text-secondary: #686868;
+
+  --bg: #171717;
+  --bg-secondary: #202020;
 }
 
 .primary {
@@ -12,14 +18,18 @@
 body {
   font: 18px monospace;
 
-  background-color: #171717;
+  background-color: var(--bg);
   color: var(--secondary);
 
   line-height: 1.8;
   margin: 0;
 }
 
-a {
+figure {
+  margin: 0;
+}
+
+a, .link {
   transition: 400ms;
   text-decoration: none;
   color: var(--primary);
@@ -51,9 +61,13 @@ figcaption {
   justify-content: center;
 }
 
+figcaption p {
+  text-align: center;
+}
+
 figcaption p,
 .muted-text {
-  color: #686868;
+  color: var(--text-secondary);
 }
 
 footer {
@@ -92,7 +106,7 @@ figure {
 .blog-post {
   display: flex;
   justify-content: center;
-  width: 100%;
+  padding: 1rem;
 }
 
 .blog-post__content {
@@ -100,7 +114,7 @@ figure {
   flex-direction: column;
   gap: 1rem;
   width: 50rem;
-  padding: 1rem;
+  max-width: 100%;
 }
 
 .blog-meta {
@@ -123,12 +137,12 @@ figure {
 }
 
 .blog-meta__date {
-  color: #8f8f8f;
+  color: var(--text-secondary);
   font-size: larger;
 }
 
 .blog-post--hoverable:hover {
-  background-color: #202020;
+  background-color: var(--bg-secondary);
   cursor: pointer;
 }
 
@@ -155,5 +169,13 @@ figure {
 
   @media (width < 500px) {
     display: none;
+  }
+}
+
+.blog-article {
+  & h1, h2, h3, h4, h5, h6 {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: var(--block);
   }
 }

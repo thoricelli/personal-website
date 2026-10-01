@@ -23,7 +23,7 @@ pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #393812;
+  background: var(--block);
 }
 
 .zoomable,

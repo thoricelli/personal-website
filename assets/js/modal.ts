@@ -1,5 +1,7 @@
-let backdrop: HTMLElement | null = document.getElementById("modalBackdrop");
-let dummy: HTMLElement | null = document.getElementById("backDropDummy");
+// TODO: Replace this with a proper class please.
+
+let backdrop: HTMLElement | null = document.getElementById("modal");
+let dummy: HTMLElement | null = document.getElementById("modalBackDrop");
 let modalClose: HTMLElement | null = document.getElementById("imgModalClose");
 let caption: HTMLElement | null = document.getElementById("imgModalCaption");
 let modalImg: HTMLImageElement | null = document.getElementById(
@@ -58,8 +60,8 @@ function closeModal() {
 
     console.log(currentImage.style.transform);
 
-    backdrop!.removeAttribute("modal-backdrop-active");
-    modalClose!.removeAttribute("modal-backdrop-active");
+    backdrop!.classList.remove("modal--active");
+    modalClose!.classList.remove("modal--active");
 
     requestAnimationFrame(() => {
       zoomed = false;
@@ -67,8 +69,8 @@ function closeModal() {
       currentImage.style.transition = "";
       currentImage.style.transform = "";
 
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
     });
   }
 }
@@ -98,10 +100,8 @@ function openModal(image: HTMLImageElement) {
     let figureCaption: HTMLElement | null =
       image.parentElement!.querySelector("figcaption");
 
-    const scrollBarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = `${scrollBarWidth}px`;
+    document.documentElement.style.overflow = "hidden";
 
     //Get alt text
     if (figureCaption) {
@@ -110,11 +110,8 @@ function openModal(image: HTMLImageElement) {
       caption!.innerText = image.getAttribute("alt")!;
     }
 
-    //fakeModalImage.src = image.src;
-    image.setAttribute("zoom-image", "true");
+    image.classList.add("image-zoomable");
     modalImg!.src = image.src;
-
-    //fakeModalImage.setAttribute("image-active", true);
 
     image.addEventListener("transitionend", transitionLogic);
 
@@ -125,7 +122,7 @@ function openModal(image: HTMLImageElement) {
         modalImg!.style.opacity = "1";
         image.style.opacity = "0";
       } else {
-        image.removeAttribute("zoom-image");
+        image.classList.remove("image-zoomable");
         image.removeEventListener("transitionend", transitionLogic);
       }
     }
@@ -137,8 +134,8 @@ function openModal(image: HTMLImageElement) {
       });
     });
 
-    backdrop!.setAttribute("modal-backdrop-active", "true");
-    modalClose!.setAttribute("modal-backdrop-active", "true");
+    backdrop!.classList.add("modal--active");
+    modalClose!.classList.add("modal--active");
 
     modalImg!.addEventListener("mousedown", (e) => {
       isDragging = true;
