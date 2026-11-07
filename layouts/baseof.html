@@ -13,7 +13,7 @@
       rel="alternate"
       type="application/rss+xml"
       title="Blogs on {{ .Site.Title }}"
-      href="/blog/index.xml"
+      href="/index.xml"
     />
 
     {{ $styles := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
