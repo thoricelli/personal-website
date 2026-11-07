@@ -16,7 +16,7 @@ disableKinds = ['taxonomy', 'term', 'section']
   author = 'thoricelli'
 
 [outputs]
-  home = ['html']
+  home = ['html', 'rss']
 
 [markup.tableOfContents]
   startLevel = 1
