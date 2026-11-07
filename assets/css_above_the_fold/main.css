@@ -129,6 +129,11 @@ figure {
   font-weight: bolder;
 }
 
+.blog-meta__subjects {
+  display: flex;
+  gap: 1rem;
+}
+
 .blog-meta__subject {
   width: fit-content;
   background-color: var(--block);

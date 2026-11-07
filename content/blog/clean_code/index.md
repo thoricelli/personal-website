@@ -1,7 +1,7 @@
 ---
 title: My Journey Towards Cleaner Code
 date: 2025-12-02T21:50:00+01:00
-subject: Software Development
+subject: ["Software Development"]
 comments: true
 ---
 

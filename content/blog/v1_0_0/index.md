@@ -1,7 +1,7 @@
 ---
 title: "Version 1.0.0 patch notes"
 date: 2025-03-04T10:00:00+01:00
-subject: "Uniform Editor"
+subject: ["Uniform Editor"]
 thumbnail: preview.png
 ---
 
