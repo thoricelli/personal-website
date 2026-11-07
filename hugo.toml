@@ -43,3 +43,8 @@ disableKinds = ['taxonomy', 'term', 'section']
           inline = [['\(', '\)']]
       [markup.goldmark.extensions.typographer]
         disable = true
+
+[caches]
+  [caches.getresource]
+    dir = ":resourceDir/_gen"
+    maxAge = -1
