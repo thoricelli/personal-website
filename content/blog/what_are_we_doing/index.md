@@ -2,7 +2,6 @@
 title: People, what are we genuinely doing?
 date: 2026-11-07T20:00:00+01:00
 subject: ["Software Development", "AI"]
-draft: true
 comments: true
 ---
 Hi to, like, the 1 random person stubmling upon my website.  
