@@ -46,5 +46,5 @@ disableKinds = ['taxonomy', 'term', 'section']
 
 [caches]
   [caches.getresource]
-    dir = ":resourceDir/_gen"
+    dir = ":cacheDir/_gen"
     maxAge = -1
