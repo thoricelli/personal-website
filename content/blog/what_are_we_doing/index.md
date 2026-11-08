@@ -4,7 +4,7 @@ date: 2026-11-07T20:00:00+01:00
 subject: ["Software Development", "AI"]
 comments: true
 ---
-Hi to, like, the 1 random person stubmling upon my website.  
+Hi to, like, the 1 random person stumbling upon my website.  
 
 I haven't posted in a while...  
 I still have a blog post in the works that explains the internals of the Roblox engine, however that has been put on the wayside...  
@@ -55,7 +55,7 @@ A lot has changed.
 
 ## Threatening my job
 
-I've always been a bit paranoid about AI and the looming thread it poses to software jobs.  
+I've always been a bit paranoid about AI and the looming threat it poses to software jobs.  
 But everytime I tried to use it to see how far these models could go... I felt safe.  
 
 The thing is these models would hallucinate or overly complicate software **everytime**.  
@@ -94,8 +94,8 @@ But could you... at least have properly understood it and sent a PR?
 
 ## Open source
 
-I see an open source project that solves a niche problem.  
-I can't wait to learn from this!  
+I see an open source project that solves a niche problem:  
+"I can't wait to learn from this!"
 
 I open their repo.  
 Their README is an entire bible of text that doesn't make any sense!
@@ -154,20 +154,22 @@ Why learn the fundamentals, the abstractions, the libraries, the programming lan
 
 when Claude can do it?  
 
-> "Oh Claude will just maintain my project, heh, I wouldn't be able to read that code!"
+> "Oh Claude will just maintain my project, heh, I'm not able to read all that code!"
 
 Wut... I'm going to go insane.
 
-These people who just vibecode, create noise, and slop together a project without an inch or a sense of knowledge nor community are:
+These people who just vibecode, create noise, and slop together a project without an inch of knowledge of their codebase are:
 - [Killing open source](https://arxiv.org/abs/2601.15494v1).  
 - Creating code without taking ANY responsibility for what they write.
 - Stealing work.
 
 Think about where the AI got it's training data from: people, humans.  
-People who wrote and thought about the code in a logical and structural matter.  
+People who put their time and effort into it.
 
 Let's not talk about the [staggering amount of money](https://youtu.be/6ZrgRjdJs3o?si=upMr1RZ4d76-y0l5) that has been invested into training these models.  
 The staggering amount of datacenters [ruining ecosystems](https://www.theguardian.com/world/2026/oct/29/finland-criminal-investigation-google-clearing-forest-datacentre) around the world.
+
+Where oh where could that have been invested better into?
 
 ## Why does AI code matter?
 
@@ -179,7 +181,7 @@ To management at company X that knows nothing about maintainability this is grea
 > You can rewrite it in Rust to make it x10 faster too?   
 > Amazing!"
 
-How many horror stories that I've heard about companies with terrible codebases, before AI, and their software is still successful and in use.
+The many horror stories, before AI, that I've heard about companies with terrible codebases and their software is still successful and in use.
 
 But... who does it matters to?  
 The users. The people who use your software.  
