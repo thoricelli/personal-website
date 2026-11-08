@@ -28,7 +28,7 @@ The junior market in Belgium (and the rest of the world) is truly in shambles.
 And there are multiple reasons that companies aren't or are barely hiring (software) juniors:
 - Recession = tight budget  
 (no, the stock market does not reflect real life)
-- The huge amount of software graduates / graduates per job
+- The huge amount of software graduates / applicants per job
 - And lastly... AI
 
 It's a shame, and I'll have to decide what I'm going to do in the near future.
@@ -88,8 +88,8 @@ Trying to find any informational video on YouTube just gives you mountains of us
 Every Roblox place has an AI-slop thumbnail.  
 For christs sake the game *I'm helping on* is getting slop-copied by AI 
 
-A personal project was forked and AI was used to rebuilt it entirely.  
-But not that I care! My projects are MIT-licensed.  
+A personal project of mine was forked and AI was used to rebuilt it entirely.  
+But not that I care! My projects are [MIT](https://en.wikipedia.org/wiki/MIT_License)-licensed.  
 But could you... at least have properly understood it and sent a PR?
 
 ## Open source
@@ -131,7 +131,7 @@ These models can be (overly) simplified to:
 
 It is a **PROBABILITY** machine, a **PREDICTION** machine.
 
-How it predicts these tokens is by training on a LOT of data, a LOT of compute and change weights based on the data itself.
+How it predicts these tokens is by training on a LOT of data, a LOT of compute and changing its weights based on the data itself.
 
 ## What AI isn't
 
@@ -158,18 +158,19 @@ when Claude can do it?
 
 Wut... I'm going to go insane.
 
-These people who just vibecode, create noise, and slop together a project without an inch of knowledge of their codebase are:
+These people who just vibecode, send slop PR's, and slop together a project without an inch of knowledge of their or others codebases are:
 - [Killing open source](https://arxiv.org/abs/2601.15494v1).  
 - Creating code without taking ANY responsibility for what they write.
 - Stealing work.
+- Creating an imense amount of noise.
 
 Think about where the AI got it's training data from: people, humans.  
-People who put their time and effort into it.
+People who put their time and effort into it, who LOGICALLY thought about the architecture.
 
 Let's not talk about the [staggering amount of money](https://youtu.be/6ZrgRjdJs3o?si=upMr1RZ4d76-y0l5) that has been invested into training these models.  
 The staggering amount of datacenters [ruining ecosystems](https://www.theguardian.com/world/2026/oct/29/finland-criminal-investigation-google-clearing-forest-datacentre) around the world.
 
-Where oh where could that have been invested better into?
+But man, where oh where could that possibly have been invested better into?
 
 ## Why does AI code matter?
 
@@ -184,7 +185,7 @@ To management at company X that knows nothing about maintainability this is grea
 The many horror stories, before AI, that I've heard about companies with terrible codebases and their software is still successful and in use.
 
 But... who does it matters to?  
-The users. The people who use your software.  
+The developers, the users. The people who use your software.  
 
 They notice the changes that don't make any sense.  
 The broken features that nobody asked for or nobody uses.  
@@ -204,4 +205,4 @@ I haven't even properly started my career yet.
 
 I'll go ask Claude for the next best steps, I'm sure that'll help.
 
-Written by a fellow [Human](/about-me).
+Fully written by a fellow [Human](/about-me).
