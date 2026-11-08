@@ -193,7 +193,7 @@ The hit on performance.
 
 # End of rant
 
-Listen, if you just use this for a fun hobby project and you want to add a feature or liberate you from closed source, all the power to you man.
+Listen, if you just use this for a fun hobby project and you want to add a feature or liberate yourself from closed source, all the power to you man.
 
 But I **refuse** to use agentic coding.  
 AI is a **tool** not a replacement for programmers.
