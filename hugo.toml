@@ -1,7 +1,8 @@
 baseURL = 'https://thorgoesdevving.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = "Thor's website"
 copyright = 'Copyright Thoricelli. All rights reserved.'
+publishDir = ".cache/public"
 
 disableKinds = ['taxonomy', 'term', 'section']
 
