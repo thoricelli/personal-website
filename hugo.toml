@@ -2,7 +2,6 @@ title = "Thor's website"
 copyright = 'Copyright Thoricelli. All rights reserved.'
 baseURL = 'https://thorgoesdevving.com/'
 locale = 'en-us'
-publishDir = ".cache/public"
 
 enableGitInfo = true
 
