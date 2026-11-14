@@ -1,0 +1,41 @@
+{{/* This file contains the header that each blog post uses. */}}
+
+<title>{{ .Title }}</title>
+
+{{ $aboveTheFold := resources.Get "css_above_the_fold/pages/blog.css" | minify }}
+<style>{{ $aboveTheFold.Content | safeCSS }}</style>
+
+<link href="/css/katex.min.css" rel="stylesheet" />
+
+<meta name="description" content="{{ .Summary }}" />
+{{- with .Params.subject }}
+  <meta name="keywords" content="{{ delimit . "," }}" />
+{{- end }}
+
+
+<link rel="author" href="https://github.com/thoricelli" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://thorgoesdevving.com" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Thor's website - {{ .Title }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+
+{{- with .Params.thumbnail -}}
+  {{- with $.Resources.GetMatch . }}
+    <meta property="og:image" content="{{ .RelPermalink }}" />
+  {{- end -}}
+{{- end -}}
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="thorgoesdevving.com" />
+<meta property="twitter:url" content="https://thorgoesdevving.com" />
+<meta name="twitter:title" content="Thor's website - {{ .Title }}" />
+<meta name="twitter:description" content="{{ .Summary }}" />
+{{- with .Params.thumbnail }}
+  {{- with $.Resources.GetMatch . }}
+    <meta name="twitter:image" content="{{ .RelPermalink }}" />
+  {{- end }}
+{{- end }}

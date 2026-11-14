@@ -4,6 +4,9 @@ date: 2026-11-07T20:00:00+01:00
 subject: ["Software Development", "AI"]
 comments: true
 ---
+A post about the use of agentic AI within and outside of software development.
+<!--more-->
+
 Hi to, like, the 1 random person stumbling upon my website.  
 
 I haven't posted in a while...  
@@ -12,8 +15,6 @@ I've been busy helping with a [seperate project](/about-me).
 
 That's not the point of this article though, what is:  
 **The use of agentic AI within and outside of software development**.
-
-<!--more-->
 
 # Table of contents
 

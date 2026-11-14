@@ -1,0 +1,18 @@
+{{/*
+A devlog has the following:
+- A master page that contains metadata about the devlog.
+- Folders per devlog.
+*/}}
+
+{{- define "head" -}}
+    {{- .Store.Set "CurrentDevLogPage" . -}}
+
+    {{- $CurrentDevLogPage := .Store.Get "CurrentDevLogPage" -}}
+    {{- partial "blog/header.html" $CurrentDevLogPage -}}
+{{- end -}}
+
+{{- define "main" -}}
+    {{ .Pages }}
+    {{- $CurrentDevLogPage := .Store.Get "CurrentDevLogPage" -}}
+    {{- /*partial "blog/content.html" $CurrentDevLogPage*/ -}}
+{{- end -}}

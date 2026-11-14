@@ -1,10 +1,12 @@
-baseURL = 'https://thorgoesdevving.com/'
-locale = 'en-us'
 title = "Thor's website"
 copyright = 'Copyright Thoricelli. All rights reserved.'
+baseURL = 'https://thorgoesdevving.com/'
+locale = 'en-us'
 publishDir = ".cache/public"
 
-disableKinds = ['taxonomy', 'term', 'section']
+enableGitInfo = true
+
+disableKinds = ['taxonomy', 'term']
 
 [minify]
   minifyOutput = true
@@ -15,6 +17,7 @@ disableKinds = ['taxonomy', 'term', 'section']
 
 [params]
   author = 'thoricelli'
+  subtitle = "The personal website and blog of thoricelli. Explore my portfolio or my articles of what I'm working on, thinking about and discovering!"
 
 [outputs]
   home = ['html', 'rss']

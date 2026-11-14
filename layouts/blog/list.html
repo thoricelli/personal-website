@@ -1,0 +1,40 @@
+{{- define "head" -}}
+    {{- partial "blog/header.html" . -}}
+{{- end -}}
+
+{{- define "main" -}}
+    <div class="blog-post">
+        <div class="blog-post__content">
+            <div class="blog-meta">
+              {{ with .Resources.GetMatch .Params.thumbnail }}
+                <div class="blog-meta__thumbnail-container">
+                  <img
+                    class="blog-meta__thumbnail-image"
+                    src="{{ .RelPermalink }}"
+                    alt="{{ $.Title }}"
+                  />
+                </div>
+              {{ end }}
+              <span class="blog-meta__title">{{ .Title }}</span>
+              <div class="blog-meta__subjects">
+                {{ range .Params.subject }}
+                  <p class="blog-meta__subject">{{ . }}</p>
+                {{ end }}
+              </div>
+              <a
+                class="blog-meta__rss"
+                title="Subscribe to the RSS feed!"
+                href="/index.xml"
+                target="_blank"
+              >
+                {{ readFile "assets/svg/rss.svg" | safeHTML }}
+              </a>
+              
+            </div>
+        </div>
+    </div>
+
+    {{- range .Pages.ByDate.Reverse -}}
+      {{- partial "blog/blog-post-entry.html" . -}}
+    {{- end -}}
+{{- end -}}

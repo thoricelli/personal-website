@@ -4,6 +4,8 @@ date: 2025-12-02T21:50:00+01:00
 subject: ["Software Development"]
 comments: true
 ---
+In this post I talk about the things I've learned when writing code.
+<!--more-->
 
 When it comes to designing and writing software systems there's **a lot** of factors to take into account.  
 A developer has to balance all of these to create a flexible system, that balance is rarely easy.
@@ -12,8 +14,6 @@ Having the "perfect" codebase doesn't exist. Every codebase has its weaknesses.
 Quick fixes, hacks, legacy code, etc...
 
 In this blog post I talk about my personal experience towards trying to make that codebase at least... a little bit cleaner.
-
-<!--more-->
 
 # First Hello World
 

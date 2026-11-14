@@ -2,12 +2,11 @@
 title: "Hello World!"
 date: 2025-08-08T10:00:00+01:00
 ---
+<!--more-->
 
 Hi, this is my personal website.
 
 I'll be posting mostly tech related stuff that I want to share info about!
-
-<!--more-->
 
 The old site used React with markdown files, which well wasn't so great for static content hosting. Oopsies.  
 This one uses [Hugo](https://gohugo.io)!  

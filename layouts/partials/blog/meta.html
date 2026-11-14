@@ -1,0 +1,28 @@
+<div class="blog-meta">
+  {{ with .Resources.GetMatch .Params.thumbnail }}
+    <div class="blog-meta__thumbnail-container">
+      <img
+        class="blog-meta__thumbnail-image"
+        src="{{ .RelPermalink }}"
+        alt="{{ $.Title }}"
+      />
+    </div>
+  {{ end }}
+  <span class="blog-meta__title">{{ .Title }}</span>
+  <div class="blog-meta__subjects">
+    {{ range .Params.subject }}
+      <p class="blog-meta__subject">{{ . }}</p>
+    {{ end }}
+  </div>
+  <span class="blog-meta__date"
+    >{{ .Date.Format "02 January 2006" }}</span
+  >
+  <a
+    class="blog-meta__rss"
+    title="Subscribe to the RSS feed!"
+    href="/index.xml"
+    target="_blank"
+  >
+    {{ readFile "assets/svg/rss.svg" | safeHTML }}
+  </a>
+</div>

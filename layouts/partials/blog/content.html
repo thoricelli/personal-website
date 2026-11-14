@@ -1,0 +1,16 @@
+{{/* This file contains the logic to render the content of a blog post. */}}
+
+<section class="blog-post">
+  <div class="blog-post__content">
+    <!--Top information-->
+    {{- partial "blog/meta.html" . -}}
+
+    <!--Main content-->
+    <article class="blog-article">{{ .ContentWithoutSummary }}</article>
+
+    <!--Comments-->
+    {{ if .Params.comments }}
+      {{ partial "blog/comments.html" }}
+    {{ end }}
+  </div>
+</section>

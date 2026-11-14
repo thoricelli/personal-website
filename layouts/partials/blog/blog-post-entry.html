@@ -1,0 +1,18 @@
+{{/* A singular blog post entry */}}
+
+<div onclick="location.href={{ .RelPermalink }}" class="blog-post blog-post--hoverable">
+  <div class="blog-post__content">
+    <div>
+      <span class="blog-meta__title">{{ .Title }}</span>
+      <div class="blog-meta__subjects">
+        {{ range .Params.subject }}
+          <p class="blog-meta__subject">{{ . }}</p>
+        {{ end }}
+      </div>
+      <p class="blog-meta__date">{{ .Date.Format "02 January 2006" }}</p>
+    </div>
+
+    {{ .Summary }}
+
+  </div>
+</div>
