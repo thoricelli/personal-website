@@ -9,7 +9,13 @@
           <p class="blog-meta__subject">{{ . }}</p>
         {{ end }}
       </div>
-      <p class="blog-meta__date">{{ .Date.Format "02 January 2006" }}</p>
+      {{- if .Date.IsZero -}}
+        {{- with index .Pages.ByDate.Reverse 0 -}}
+          <p class="blog-meta__date">{{ .Date.Format "02 January 2006" }}</p>
+        {{ end }}
+      {{- else -}}
+        <p class="blog-meta__date">{{ .Date.Format "02 January 2006" }}</p>
+      {{- end -}}
     </div>
 
     {{ .Summary }}

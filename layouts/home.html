@@ -66,9 +66,19 @@
   </section>
 
   <!--Blog posts-->
+  {{- $Posts := slice -}}
+  {{- range (.Site.GetPage "blog").Pages.ByDate.Reverse -}}
+    {{- $Date := .Date -}}
+    {{- if $Date.IsZero -}}
+      {{- with index .Pages.ByDate.Reverse 0 -}}
+          {{- $Date = .Date -}}
+      {{ end }}
+    {{- end -}}
+    {{- $Posts = $Posts | append (dict "Page" . "Date" $Date) -}}
+  {{- end -}}
   <section>
-    {{ range (.Site.GetPage "blog").Pages.ByDate.Reverse }}
-      {{ partial "blog/blog-post-entry.html" . }}
-    {{ end }}
+    {{- range sort $Posts "Date" "desc" -}}
+      {{- partial "blog/blog-post-entry.html" .Page -}}
+    {{- end -}}
   </section>
 {{ end }}
