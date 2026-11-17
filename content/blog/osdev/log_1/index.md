@@ -60,7 +60,7 @@ I'm not going manually define a Makefile (only really for basic commands), and s
 This file is needed to add the multiboot2 header, and add a 1MB padding due to the [x86 memory map](https://wiki.osdev.org/Memory_Map_(x86)).
 - `toolchain-x.cmake`: These files define what compiler for C, C++ and assembly that that target uses (i686 and x86_64 respectively).
 
-{{<figure src="structure.png" caption="Barebones OS file structure">}}
+{{<figure src="/img/structure.png" caption="Barebones OS file structure">}}
 
 # Writing the barebones
 
